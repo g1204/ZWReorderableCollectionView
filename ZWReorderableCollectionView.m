@@ -125,7 +125,7 @@ static NSMutableArray<NSIndexPath *> *indexPathsFromRange(NSRange range);
                                                                     : [self getOriginalIndexPathForIndexPath:[NSIndexPath indexPathForItem:destinationIndex - 1 inSection:0]].item + 1;
         NSMutableArray<NSIndexPath *> *sourceIndexPaths = self.indexPathsForDraggingCells.copy;
         [self.originDelegate reorderableCollectionView:self willMoveItemsAtIndexPaths:sourceIndexPaths toIndex:originalDestinationIndex];
-        [self.originDataSource reorderableCollectionView:self moveItemAtIndexPaths:sourceIndexPaths toIndex:originalDestinationIndex];
+        [self.originDataSource reorderableCollectionView:self moveItemsAtIndexPaths:sourceIndexPaths toIndex:originalDestinationIndex];
 
         NSIndexPath *indexPathForPlaceholderCell = self.indexPathForPlaceholderCell;
         self.indexPathForPlaceholderCell = nil;

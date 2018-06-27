@@ -6,7 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZWReorderableCollectionViewDataSource <UICollectionViewDataSource>
 
-- (void)reorderableCollectionView:(ZWReorderableCollectionView *)collectionView moveItemAtIndexPaths:(NSArray<NSIndexPath *> *)sourceIndexPaths toIndex:(NSUInteger)destinationIndex;
+- (void)reorderableCollectionView:(ZWReorderableCollectionView *)collectionView moveItemsAtIndexPaths:(NSArray<NSIndexPath *> *)sourceIndexPaths toIndex:(NSUInteger)destinationIndex;
 
 @end
 
