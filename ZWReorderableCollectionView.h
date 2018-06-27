@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@protocol ZWReorderableCollectionViewReorderDelegate <UICollectionViewDelegate>
+@protocol ZWReorderableCollectionViewDelegate <UICollectionViewDelegate>
 
 - (void)reorderableCollectionView:(ZWReorderableCollectionView *)collectionView willMoveItemsAtIndexPaths:(NSArray<NSIndexPath *> *)sourceIndexPaths toIndex:(NSUInteger)destinationIndex;
 - (void)reorderableCollectionView:(ZWReorderableCollectionView *)collectionView didMoveItemsAtIndexPaths:(NSArray<NSIndexPath *> *)sourceIndexPaths toIndex:(NSUInteger)destinationIndex;
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZWReorderableCollectionView : UICollectionView
 
 @property (nonatomic, weak, nullable) id<ZWReorderableCollectionViewDataSource> dataSource;
-@property (nonatomic, weak, nullable) id<ZWReorderableCollectionViewReorderDelegate> delegate;
+@property (nonatomic, weak, nullable) id<ZWReorderableCollectionViewDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout;
 

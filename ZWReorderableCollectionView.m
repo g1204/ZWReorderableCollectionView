@@ -3,7 +3,7 @@
 @interface ZWReorderableCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak, nullable) id<ZWReorderableCollectionViewDataSource> originDataSource;
-@property (nonatomic, weak, nullable) id<ZWReorderableCollectionViewReorderDelegate> originDelegate;
+@property (nonatomic, weak, nullable) id<ZWReorderableCollectionViewDelegate> originDelegate;
 
 @property (nonatomic, readonly) BOOL isDraggingCell;
 @property (nonatomic, strong) UIView *movingCellSnapshotView;
@@ -48,7 +48,7 @@ static NSMutableArray<NSIndexPath *> *indexPathsFromRange(NSRange range);
     [super setDataSource:self];
 }
 
-- (void)setDelegate:(id<ZWReorderableCollectionViewReorderDelegate>)delegate {
+- (void)setDelegate:(id<ZWReorderableCollectionViewDelegate>)delegate {
     self.originDelegate = delegate;
     [super setDelegate:self];
 }
